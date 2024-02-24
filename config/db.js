@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
+const { MongoClient } = require('mongodb');
 const uri = process.env.DB_URL;
 
-exports.connectToDb = ()=>{
+const client = new MongoClient(uri);
+
+exports.client.connectToDb = ()=>{
     mongoose.connect(uri,{
         useNewUrlParser:true,
         useUnifiedTopology:true
