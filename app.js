@@ -15,7 +15,6 @@ app.use(cors())
 
 
 // db connection 
-connectToDb();
 
 app.use('/api',todoRoutes);
 app.use('/api', taskRoutes);
